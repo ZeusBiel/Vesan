@@ -1987,6 +1987,17 @@ nav.nav-inner {
 
 }
 
+.header-dec {
+    position: absolute;    /* Define o posicionamento absoluto */         /* Distância do fundo */
+    left: 0;      
+	bottom: 0;         /* Alinha à esquerda */
+    right: 0;              /* Alinha à direita */
+    text-align: center;    /* Centraliza a imagem horizontalmente */
+    height: auto;          /* Altura automática para manter a proporção */
+    width: 100%;   
+	z-index: 31;
+}
+
 .play-pause_slider {
 
 	position: absolute;
@@ -10993,7 +11004,7 @@ nav.nav-inner {
 
 		width: auto;
 
-		height: 50px;
+		height: 70px;
 
 	}
 
@@ -11012,7 +11023,7 @@ nav.nav-inner {
 
 		right: -350px;
 
-		top: 90px;
+		top: 60px;
 
 	}
 
@@ -11296,4 +11307,11 @@ nav.nav-inner {
 	left: 5px;
   }
 
+}
+
+@media (max-width: 768px) {
+
+	.main-header{
+		max-width: 50%;
+	}
 }
