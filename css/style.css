@@ -11208,11 +11208,22 @@ nav.nav-inner {
 		width: 100%;
 		margin-top: 10px;
 	}
+
+	.wrapper, .header-top{
+		margin: 0;
+		padding: 0;
+		height: auto;
+		outline: 0;
+		left: 0;
+		right: 0;
+		top: 0;
+		width: 100%;
+	}
 }
 
 @media (max-width: 1024px) {
 
-  body, .main, .about-wrap_sin, .logo-holder, .header-top, .fs-wrapper, .wrapper, .content-box, .container, .wrapper, .content, .overlay{
+  body, .main, .about-wrap_sin, .logo-holder, .header-top, .fs-wrapper, .content-box, .container, .wrapper, .content{
 	margin: 0;
 	padding: 0;
 	height: auto;
