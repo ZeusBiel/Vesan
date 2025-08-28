@@ -1988,14 +1988,11 @@ nav.nav-inner {
 }
 
 .header-dec {
-    position: absolute;    /* Define o posicionamento absoluto */         /* Distância do fundo */
-    left: 0;      
-	bottom: 0;         /* Alinha à esquerda */
-    right: 0;              /* Alinha à direita */
-    text-align: center;    /* Centraliza a imagem horizontalmente */
-    height: auto;          /* Altura automática para manter a proporção */
-    width: 100%;   
-	z-index: 31;
+
+    text-align: center;
+    height: auto;
+	width: 200px;
+    z-index: 32;
 }
 
 .play-pause_slider {
