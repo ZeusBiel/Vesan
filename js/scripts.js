@@ -1711,27 +1711,7 @@ $(".loader-wrap").html(`
 
 function firstload() {
 
-    function a(a) {
-
-        var b = a.length,
-
-            c, d;
-
-        while (b) {
-
-            d = Math.floor(Math.random() * b--);
-
-            c = a[b];
-
-            a[b] = a[d];
-
-            a[d] = c;
-
-        }
-
-        return a;
-
-    }
+    
 
     setTimeout(function () {
 

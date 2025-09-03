@@ -7411,6 +7411,8 @@ nav.nav-inner {
 
 .testimonilas-carousel {
 
+	height: auto;
+
 	background: #f9f9f9;
 
 	padding: 30px 30px 60px;
@@ -7457,34 +7459,6 @@ nav.nav-inner {
 
 }
 
-.testi-avatar {
-
-	position: absolute;
-
-	left: 30px;
-
-	top: 50%;
-
-	margin-top: -25px;
-
-	width: 50px;
-
-	height: 50px;
-
-	overflow: hidden;
-
-	box-shadow: 0 10px 24px 0px rgba(0, 0, 0, .2);
-
-}
-
-.testi-avatar img {
-
-	width: 100%;
-
-	height: 100%;
-
-}
-
 .testimonilas-text,
 .testimonilas-text-item {
 
@@ -7498,34 +7472,10 @@ nav.nav-inner {
 
 }
 
-.testimonilas-text-item:before {
-
-	font-family: "Font Awesome 6 Pro";
-
-	content: "\f10e";
-
-	bottom: 20px;
-
-	right: 30px;
-
-	position: absolute;
-
-	font-size: 2.5em;
-
-	font-weight: bold;
-
-	color: #eee;
-
-	z-index: 1;
-
-}
-
 .testimonilas-text-item-wrap {
 
 	background: #f9f9f9;
-
-	padding: 20px;
-
+	padding: 10px;
 	border: 1px solid #eee;
 
 }
@@ -7554,7 +7504,7 @@ nav.nav-inner {
 
 .testi-footer {
 
-	position: absolute;
+	
 
 	left: 30px;
 
@@ -7579,6 +7529,7 @@ nav.nav-inner {
 	background: var(--main-color);
 
 	padding: 12px 30px;
+
 
 	display: block;
 
@@ -11347,7 +11298,7 @@ nav.nav-inner {
     background: rgba(24,24,24,0.45);
     z-index: 2;
 }
-/* Efeito vibrante para o carrossel de fundo */
+
 .bg-carousel .bg {
     transition: transform 2s cubic-bezier(.4,2,.3,1), filter 2s cubic-bezier(.4,2,.3,1);
 }
