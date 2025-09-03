@@ -6422,7 +6422,7 @@ nav.nav-inner {
 
 	text-align: center;
 
-	background: #222;
+	background: #000;
 
 	color: var(--main-color);
 
@@ -7437,7 +7437,7 @@ nav.nav-inner {
 
 	position: relative;
 
-	padding-left: 100px;
+	padding-left: 30px;
 
 }
 
@@ -7446,6 +7446,8 @@ nav.nav-inner {
 	text-align: left;
 
 	line-height: 80px;
+
+	left: 0;
 
 	font-family: var(--secondary-font);
 
@@ -8252,9 +8254,9 @@ nav.nav-inner {
 
 	background: #eee;
 
-	height: 1px;
+	height: 3px;
 
-	animation: scroll2 10s infinite;
+	animation: scroll2 8s infinite;
 
 	transition-delay: 1.0s
 }
@@ -8267,7 +8269,7 @@ nav.nav-inner {
 
 	top: 0;
 
-	height: 1px;
+	height: 3px;
 
 	width: 20px;
 
@@ -8291,9 +8293,9 @@ nav.nav-inner {
 
 	background: #eee;
 
-	width: 1px;
+	width: 3px;
 
-	animation: scroll3 10s infinite;
+	animation: scroll3 8s infinite;
 
 	transition-delay: 1.5s
 }
@@ -8306,7 +8308,7 @@ nav.nav-inner {
 
 	top: 50%;
 
-	width: 1px;
+	width: 3px;
 
 	height: 20px;
 
@@ -11312,3 +11314,88 @@ nav.nav-inner {
 		max-width: 50%;
 	}
 }
+
+.bg-carousel {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+}
+.bg-carousel .swiper-container {
+    width: 100%;
+    height: 100%;
+}
+.bg-carousel .swiper-slide {
+    width: 100%;
+    height: 100%;
+}
+.bg-carousel .bg {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0; left: 0;
+    background-size: cover;
+    background-position: center;
+}
+.bg-carousel .overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(24,24,24,0.45);
+    z-index: 2;
+}
+/* Efeito vibrante para o carrossel de fundo */
+.bg-carousel .bg {
+    transition: transform 2s cubic-bezier(.4,2,.3,1), filter 2s cubic-bezier(.4,2,.3,1);
+}
+.bg-carousel .bg-zoom {
+    transform: scale(1.08);
+    filter: brightness(1.15) saturate(1.3) drop-shadow(0 0 40px #ffd700);
+}
+
+.loader-logo-pulse {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10001;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.loader-logo-img {
+    width: 60px;
+    height: auto;
+    z-index: 2;
+    position: relative;
+    filter: drop-shadow(0 0 8px #fdba11);
+    animation: logoFadeOut 0.7s 1.2s forwards;
+}
+.pulse-circle {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: 2px solid #fdba11;
+    opacity: 0.6;
+    pointer-events: none;
+    z-index: 1;
+    animation: pulseCircle 1.2s cubic-bezier(.4,2,.3,1) forwards;
+}
+.pulse-circle1 { width: 60px; height: 60px; animation-delay: 0s; }
+.pulse-circle2 { width: 80px; height: 80px; animation-delay: 0.2s; }
+.pulse-circle3 { width: 100px; height: 100px; animation-delay: 0.4s; }
+
+@keyframes pulseCircle {
+    0%   { opacity: 0.6; transform: translate(-50%, -50%) scale(0.7);}
+    60%  { opacity: 0.3; }
+    100% { opacity: 0; transform: translate(-50%, -50%) scale(1.5);}
+}
+@keyframes logoFadeOut {
+    to { opacity: 0; }
+}
+

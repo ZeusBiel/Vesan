@@ -1659,6 +1659,31 @@ function initTrustbook() {
 
 }
 
+// Carrossel de fundo tela de boas-vindas
+if ($('.bg-swiper').length > 0) {
+    new Swiper('.bg-swiper', {
+        loop: true,
+        slidesPerView: 1,
+        effect: 'fade',
+        fadeEffect: { crossFade: true },
+        speed: 1200, // Transição mais rápida e vibrante
+        autoplay: {
+            delay: 3000, // Troca mais rápida
+            disableOnInteraction: false
+        },
+        pagination: false,
+        navigation: false,
+        on: {
+            slideChangeTransitionStart: function () {
+                $('.bg-swiper .swiper-slide-active .bg').addClass('bg-zoom');
+            },
+            slideChangeTransitionEnd: function () {
+                $('.bg-swiper .swiper-slide .bg').removeClass('bg-zoom');
+            }
+        }
+    });
+}
+
 $.fn.duplicate = function (a, b) {
 
     const c = [];
@@ -1675,9 +1700,14 @@ $.fn.duplicate = function (a, b) {
 
 		
 
-$(".loader-wrap").append('<div class="loader-wrap-container fs-wrapper" data-ran="25"></div>');
-
-$("<div class='lw-dot'><span class='lw-dot-anim'></span></div>").duplicate(25).appendTo(".loader-wrap-container");
+$(".loader-wrap").html(`
+    <div class="loader-logo-pulse">
+        <img src="images/logo3.png" alt="Logo" class="loader-logo-img">
+        <div class="pulse-circle pulse-circle1"></div>
+        <div class="pulse-circle pulse-circle2"></div>
+        <div class="pulse-circle pulse-circle3"></div>
+    </div>
+`);
 
 function firstload() {
 
