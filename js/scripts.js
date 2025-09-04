@@ -1,4 +1,4 @@
-function initTrustbook() {
+function initVesan() {
 
     "use strict";
 
@@ -1759,6 +1759,6 @@ document.addEventListener('gesturestart', function (e) {
 
 $(document).ready(function () {
 
-    initTrustbook();
+    initVesan();
 
 });
